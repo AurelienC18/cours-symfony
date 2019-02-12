@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="row">
+        <img class="card-img-top col-6" src="{{ asset('images/' ~ recipe.picture) }}" alt="Card image cap">
+        <div class="col-6">
+            <h3>{{ recipe.label }}</h3>
+            <p>Difficulté : {{ recipe.difficulty }}</p>
+            <p>Temps de préparation : {{ recipe.time }}</p>
+            <p>{{ recipe.description }}</p>
+        </div>
+    </div>
+
+
+{% endblock %}

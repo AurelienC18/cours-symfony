@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>Titre</h1>
+
+    <div class="container">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th scope="col">Label</th>
+                <th scope="col">Description</th>
+                <th scope="col">States</th>
+                <th scope="col">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for task in tasks %}
+                <tr>
+                    <td>{{ task.label }}</td>
+                    <td>{{ task.description }}</td>
+                    <td>{{ task.isDone ? task.isDone : "0" }}</td>
+                    <td><button class="btn btn-primary"> Terminer</button></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+
+
+
+{% endblock %}
